@@ -23,7 +23,7 @@ td {text-align: center; font-size: 14px; }
 </head>
 <body>
 <h2>Escolha o método de cálculo</h2> <b>Gean Guimaraes</b>
-<p><center><strong>A vida é muito curta para você não ser o protagonista.</strong><center></p>
+<h3><p><center><strong>A vida é muito curta para você não ser o protagonista.</strong><center></p></h3>
 <div class="card-body">
 <p>Escolha o cálculo que você deseja acessar.</p>
 <p><a href="calcule-o-boleto-gean.html"><button type="button" class="btn btn-primary">Calcular boleto que preciso pagar para receber o cashback máximo <i class="fas fa-barcode"></i></button></a></p>
@@ -32,5 +32,26 @@ td {text-align: center; font-size: 14px; }
   </div>
 
 <div class="card"></div>
+<script>
+  function typeWriter(elemento) {
+    const textoArray = elemento.innerHTML.split('');
+    elemento.innerHTML = '';
+    textoArray.forEach((letra, i) => {
+      setTimeout(() => elemento.innerHTML += letra, 75 * i);
+    });
+  }
+
+  // Se estiver tendo problemas com performance, utilize o FOR loop como abaixo no local do forEach
+  // function typeWriter(elemento) {
+  //   const textoArray = elemento.innerHTML.split('');
+  //   elemento.innerHTML = '';
+  //   for(let i = 0; i < textoArray.length; i++) {
+  //     setTimeout(() => elemento.innerHTML += textoArray[i], 75 * i);
+  //   }
+  // }
+
+  const titulo = document.querySelector('h3');
+  typeWriter(titulo);
+</script>
 </body  oncontextmenu = "return false" onkeydown='return false'>
 </html> 
