@@ -5,7 +5,7 @@ from setuptools import setup, find_packages
 
 setup(
     
-    url="https://github.com/maraes/PicPay
+    url="https://github.com/maraes/PicPay",
     packages=find_packages(exclude=["tests*"]),
     install_requires=[
         str(r)
